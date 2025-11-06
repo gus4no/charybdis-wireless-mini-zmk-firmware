@@ -12,12 +12,12 @@
             bindings = <&td_bore>;
             key-positions = <38 39>;
         };
-        
+
         combo_left_click {
             bindings = <&mkp LCLK>;
             key-positions = <25 26>;
         };
-        
+
         combo_middle_click {
             bindings = <&mkp MCLK>;
             key-positions = <26 27>;
@@ -26,6 +26,41 @@
         combo_right_click {
             bindings = <&mkp RCLK>;
             key-positions = <27 28>;
+        };
+
+        combo_lesc {
+            key-positions = <1 2 3>;
+            bindings = <&kp ESC>;
+        };
+
+        combo_resc {
+            key-positions = <6 7 8>;
+            bindings = <&kp ESC>;
+        };
+
+        combo_mesc {
+            key-positions = <26 27 28>;
+            bindings = <&kp ESC>;
+        };
+
+        combo_quote {
+            key-positions = <7 8>;
+            bindings = <&kp SINGLE_QUOTE>;
+        };
+
+        combo_sticky_shift {
+            key-positions = <11 18>;
+            bindings = <&skcaps>;
+        };
+
+        combo_scroll {
+            bindings = <&mo 4>;
+            key-positions = <25 26>;
+        };
+
+        combo_bootloader {
+            bindings = <&bootloader>;
+            key-positions = <0 9>;
         };
     };
 };
