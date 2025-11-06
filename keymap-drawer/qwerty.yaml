@@ -25,7 +25,7 @@ layers:
   - {t: L, h: LALT}
   - {t: ;, h: RCMD}
   - DEL
-  - CLIP HIST
+  - {t: ▽, type: trans}
   - Z
   - X
   - C
