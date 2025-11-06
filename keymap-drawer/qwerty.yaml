@@ -194,8 +194,8 @@ layers:
   - ''
   - ''
   - '3'
-  - LSHFT
-  - Y
+  - {t: LSHFT, type: held}
+  - {t: Y, type: held}
   - X
   - C
   - V
@@ -348,3 +348,17 @@ combos:
   k: Mid CLK
 - p: [27, 28]
   k: R CLK
+- p: [1, 2, 3]
+  k: ESC
+- p: [6, 7, 8]
+  k: ESC
+- p: [26, 27, 28]
+  k: ESC
+- p: [7, 8]
+  k: ''''
+- p: [11, 18]
+  k: '&skcaps'
+- p: [25, 26]
+  k: Game
+- p: [0, 9]
+  k: BOOT LDR
