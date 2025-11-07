@@ -26,11 +26,8 @@
 // #define BASE    0
 // #define NUM     1
 // #define NAV     2
-// #define SYM     3
-// #define GAME    4
-// #define EXTRAS  5
-// #define SLOW    6
-// #define SCROLL  7
+// #define MOUSE   3
+// #define SCROLL  4
 
     keymap {
         compatible = "zmk,keymap";
@@ -64,38 +61,8 @@
             >;
         };
 
-        SYM {
-            display-name = "Sym";
-            bindings = <
-&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-                              &trans    &trans    &trans    &trans    &trans
-            >;
-        };
-
-        GAME {
-            display-name = "Game";
-            bindings = <
-&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-                              &trans    &trans    &trans    &trans    &trans
-            >;
-        };
-
-        EXTRAS {
-            display-name = "Xtra";
-            bindings = <
-&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-                              &trans    &trans    &trans    &trans    &trans
-            >;
-        };
-
-        SLOW {
-            display-name = "Slow";
+        MOUSE {
+            display-name = "Mouse";
             bindings = <
 &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
 &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
