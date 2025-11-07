@@ -36,7 +36,7 @@
             bindings = <
 &kp Q         &kp W         &kp F         &kp P            &kp B            &kp J          &kp L             &kp U         &kp Y            AS(SEMI)
 &mt LALT A    &mt LSHFT R   &lt 1 S       &mt LGUI T       &kp G            &kp M          &mt RGUI N        &lt 2 E       &mt RSHFT I      &mt RCTRL O
-&kp Z         &kp X         &kp C         &kp D         &kp V            &kp K          &kp H          AS(COMMA)     AS(DOT)          AS(SLASH)
+&kp Z         &kp X         &kp C         &kp D            &kp V            &kp K          &kp H             AS(COMMA)     AS(DOT)          AS(SLASH)
                             &mo 4         &kp ENTER        &mt LSHFT TAB    &kp BACKSPACE  &kp SPACE
             >;
         };
@@ -44,9 +44,9 @@
         NUM {
             display-name = "Num";
             bindings = <
-&trans   &trans     &trans   &trans    &trans          &kp PIPE   AS(N7)  AS(N8)  AS(N9)  &kp BSLH
-&trans   &kp LSHFT  &trans   &kp LGUI  &trans          &kp EQUAL  AS(N4)  AS(N5)  AS(N6)  &kp MINUS
-&trans   &trans     &trans   &trans    &trans          &kp PLUS   AS(N1)  AS(N2)  AS(N3)  &kp UNDERSCORE
+&trans &trans   &trans     &trans   &trans    &trans          &kp PIPE   AS(N7)  AS(N8)  AS(N9)  &kp BSLH &trans
+&trans &trans   &kp LSHFT  &trans   &kp LGUI  &trans          &kp EQUAL  AS(N4)  AS(N5)  AS(N6)  &kp MINUS &trans
+&trans &trans   &trans     &trans   &trans    &trans          &kp PLUS   AS(N1)  AS(N2)  AS(N3)  &kp UNDERSCORE &trans
                     &trans   &trans    &trans          &trans     AS(N0)
             >;
         };
@@ -54,11 +54,11 @@
         NAV {
             display-name = "Nav";
             bindings = <
-AS(TILDE)  AS(LBRC)      &kp UP      AS(RBRC)     &kp C_NEXT     &trans   &trans   &trans &trans   &trans
-&kp TAB    &kp LEFT      &kp DOWN    &kp RIGHT    &kp C_PP       &trans   &kp RGUI &trans &kp RSHFT &trans
-&trans     &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP &kp C_PREV     &trans   &kp RALT &trans &kp RCTRL &trans
-                         &trans      &trans       &trans         &trans   &trans
-            >;
+&trans AS(TILDE)  AS(LBRC)      &kp UP      AS(RBRC)     &kp C_NEXT     &trans   &trans   &trans &trans    &trans &trans
+&trans &kp TAB    &kp LEFT      &kp DOWN    &kp RIGHT    &kp C_PP       &trans   &kp RGUI &trans &kp RSHFT &trans &trans
+&trans &trans     &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP &kp C_PREV     &trans   &kp RALT &trans &kp RCTRL &trans &trans
+                                &trans      &trans       &trans         &trans   &trans
+ >;
         };
 
         MOUSE {
@@ -66,7 +66,7 @@ AS(TILDE)  AS(LBRC)      &kp UP      AS(RBRC)     &kp C_NEXT     &trans   &trans
             bindings = <
 &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
 &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &trans    &trans    &trans    &trans    &trans    &mkp MB1  &mkp MB3  &mkp MB2  &kp LGUI(LBRC)
+&trans    &trans    &trans    &trans    &trans    &trans    &mkp MB1  &mkp MB3  &mkp MB2  &kp LG(LBRC)
                     &trans    &trans    &trans    &trans    &trans
             >;
         };
