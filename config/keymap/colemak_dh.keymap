@@ -12,6 +12,12 @@
 #include "behaviors.dtsi"
 #include "combos.dtsi"
 
+&mt {
+    flavor = "balanced";
+    quick-tap-ms = <175>;
+    require-prior-idle-ms = <125>;
+};
+
 / {
 /* --- KEYMAP CONFIG --- */
 // ╭──────┬──────┬──────┬──────┬──────╮       ╭──────┬──────┬──────┬──────┬──────╮
