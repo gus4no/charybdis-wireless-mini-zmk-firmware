@@ -36,7 +36,7 @@
             bindings = <
 &kp Q         &kp W         &kp F         &kp P            &kp B            &kp J          &kp L             &kp U         &kp Y            AS(SEMI)
 &mt LALT A    &mt LSHFT R   &lt 1 S       &mt LGUI T       &kp G            &kp M          &mt RGUI N        &lt 2 E       &mt RSHFT I      &mt RCTRL O
-&kp Z         &kp X         &kp C         &mehtt D         &kp V            &kp K          &mehtt H          AS(COMMA)     AS(DOT)          AS(SLASH)
+&kp Z         &kp X         &kp C         &kp D         &kp V            &kp K          &kp H          AS(COMMA)     AS(DOT)          AS(SLASH)
                             &mo 4         &kp ENTER        &mt LSHFT TAB    &kp BACKSPACE  &kp SPACE
             >;
         };
