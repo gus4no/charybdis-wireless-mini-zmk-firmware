@@ -5,7 +5,7 @@
     /* base processor chain on all layers */
     input-processors = <
       &zip_xy_scaler 5 5
-      &zip_temp_layer 3 2000
+      &zip_temp_layer 3 700
     >;
 
 

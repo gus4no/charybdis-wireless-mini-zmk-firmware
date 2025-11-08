@@ -3,38 +3,38 @@
         compatible = "zmk,combos";
 
         combo_lesc {
-            key-positions = <1 2 3>;
+            key-positions = <2 3 4>;
             bindings = <&esc_base>;
         };
 
         combo_resc {
-            key-positions = <6 7 8>;
+            key-positions = <7 8 9>;
             bindings = <&esc_base>;
         };
 
         combo_mesc {
-            key-positions = <26 27 28>;
+            key-positions = <31 32 33>;
             bindings = <&esc_base>;
         };
 
         combo_quote {
-            key-positions = <7 8>;
+            key-positions = <8 9>;
             bindings = <&kp SINGLE_QUOTE>;
         };
 
         combo_sticky_shift {
-            key-positions = <11 18>;
+            key-positions = <14 21>;
             bindings = <&skcaps>;
         };
 
         combo_scroll {
             bindings = <&mo 4>;
-            key-positions = <27 28>;
+            key-positions = <32 33>;
         };
 
         combo_bootloader {
             bindings = <&bootloader>;
-            key-positions = <0 9>;
+            key-positions = <1 10>;
         };
     };
 };
