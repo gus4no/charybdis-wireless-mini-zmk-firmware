@@ -1,11 +1,17 @@
 / {
   macros {
-      meh: meh {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCTRL &kp LALT &kp LSHFT
-                    &macro_pause_for_release
-                    &macro_release &kp LCTRL &kp LALT &kp LSHFT>;
+    meh: meh {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_press &kp LCTRL &kp LALT &kp LSHFT
+                  &macro_pause_for_release
+                  &macro_release &kp LCTRL &kp LALT &kp LSHFT>;
+    };
+
+    esc_base: esc_base {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp ESC &to 0>;
     };
   };
 };

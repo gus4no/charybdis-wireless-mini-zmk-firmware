@@ -4,17 +4,17 @@
 
         combo_lesc {
             key-positions = <1 2 3>;
-            bindings = <&kp ESC>;
+            bindings = <&esc_base>;
         };
 
         combo_resc {
             key-positions = <6 7 8>;
-            bindings = <&kp ESC>;
+            bindings = <&esc_base>;
         };
 
         combo_mesc {
             key-positions = <26 27 28>;
-            bindings = <&kp ESC>;
+            bindings = <&esc_base>;
         };
 
         combo_quote {
