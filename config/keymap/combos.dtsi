@@ -32,6 +32,11 @@
             key-positions = <32 33>;
         };
 
+        combo_slow_pointer {
+            bindings = <&mo 5>;
+            key-positions = <25 26>;
+        };
+
         combo_bootloader {
             bindings = <&bootloader>;
             key-positions = <1 10>;

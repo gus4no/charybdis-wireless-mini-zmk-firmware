@@ -34,6 +34,7 @@
 // #define NAV     2
 // #define MOUSE   3
 // #define SCROLL  4
+// #define SLOW    5
 
     keymap {
         compatible = "zmk,keymap";
@@ -79,6 +80,16 @@
 
         SCROLL {
             display-name = "Scroll";
+            bindings = <
+&none &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans &none
+&none &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans &none
+&none &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans &none
+                           &trans    &trans    &trans    &trans    &trans
+            >;
+        };
+
+        SLOW {
+            display-name = "Slow";
             bindings = <
 &none &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans &none
 &none &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans &none
