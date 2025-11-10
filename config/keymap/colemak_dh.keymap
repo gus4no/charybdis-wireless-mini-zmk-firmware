@@ -61,10 +61,10 @@
         NAV {
             display-name = "Nav";
             bindings = <
-&none AS(TILDE)  AS(LBRC)      &kp UP      AS(RBRC)     &kp C_NEXT     &trans   &trans   &trans &trans    &trans &none
+&none AS(GRAVE)  AS(LBRC)      &kp UP      AS(RBRC)     &kp C_NEXT     &trans   &trans   &trans &trans    &trans &none
 &none &kp TAB    &kp LEFT      &kp DOWN    &kp RIGHT    &kp C_PP       &trans   &kp RGUI &trans &kp RSHFT &trans &none
 &none &trans     &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP &kp C_PREV     &trans   &kp RALT &trans &kp RCTRL &trans &none
-                                &trans      &trans       AS(TILDE)      &trans   &trans
+                                &trans      &trans       AS(GRAVE)      &trans   &trans
  >;
         };
 
