@@ -76,5 +76,19 @@
             bindings = <&mo>, <&mkp>;
             tapping-term-ms = <150>;
         };
+
+        &qmt: quick_mod_tap  {
+            flavor = "balanced";
+            tapping-term-ms = <175>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <0>;
+        };
+
+        &smt: slow_mod_tap  {
+            flavor = "balanced";
+            tapping-term-ms = <250>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <0>;
+        };
     };
 };
