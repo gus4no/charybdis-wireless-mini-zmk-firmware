@@ -43,7 +43,7 @@
             bindings = <
 &none &kp Q         &kp W         &kp F         &kp P            &kp B            &kp J          &kp L             &kp U         &kp Y            AS(SEMI)    &none
 &none &smt LALT A    &qmt LSHFT R   &lt 1 S       &mt LGUI T       &kp G            &kp M          &mt RGUI N        &lt 2 E       &qmt RSHFT I      &smt RCTRL O &none
-&none &kp Z         &kp X         &kp C         &mehtt 0 D       &kp V            &kp K          &mehtt 0 H        AS(COMMA)     AS(DOT)          AS(SLASH)   &none
+&none &kp Z         &kp X         &kp C         &meh_d       &kp V            &kp K          &meh_h        AS(COMMA)     AS(DOT)          AS(SLASH)   &none
                                   &lt 4 ESC         &kp ENTER        &mt LSHFT TAB    &kp BACKSPACE  &kp SPACE
             >;
         };
