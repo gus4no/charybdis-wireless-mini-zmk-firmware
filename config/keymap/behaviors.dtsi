@@ -44,11 +44,11 @@
          mehtt: mehtt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <175>;
             bindings = <&meh>, <&kp>;
             flavor = "balanced";
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <50>;
         };
 
         skcaps: sticky_keys_double_tap_caps {
@@ -77,14 +77,14 @@
             tapping-term-ms = <150>;
         };
 
-        &qmt: quick_mod_tap  {
+        qmt: quick_mod_tap  {
             flavor = "balanced";
             tapping-term-ms = <175>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <0>;
         };
 
-        &smt: slow_mod_tap  {
+        smt: slow_mod_tap  {
             flavor = "balanced";
             tapping-term-ms = <250>;
             quick-tap-ms = <175>;
