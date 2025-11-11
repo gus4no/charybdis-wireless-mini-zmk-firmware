@@ -19,7 +19,7 @@
 
         combo_quote {
             key-positions = <8 9>;
-            bindings = <&as_single_quote>;
+            bindings = <&kp SINGLE_QUOTE>;
         };
 
         combo_sticky_shift {

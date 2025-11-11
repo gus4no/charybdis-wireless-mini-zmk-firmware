@@ -67,15 +67,6 @@
           bindings = <&kp>, <&kp>;
         };
 
-        as_single_quote: as_single_quote {
-          compatible = "zmk,behavior-hold-tap";
-          #binding-cells = <0>;
-          tapping-term-ms = <150>;
-          quick-tap-ms = <0>;
-          flavor = "balanced";
-          bindings = <&kp DOUBLE_QUOTES>, <&kp SINGLE_QUOTE>;
-        };
-
         middle_click_scroll: middle_click_scroll {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
