@@ -51,30 +51,6 @@
             require-prior-idle-ms = <50>;
         };
 
-        meh_mod: meh_mod {
-          compatible = "zmk,behavior-mod-morph";
-          #binding-cells = <0>;
-          mods = <(MOD_LCTL | MOD_LALT | MOD_LSFT)>;
-        };
-
-        meh_h: meh_h {
-          compatible = "zmk,behavior-hold-tap";
-          #binding-cells = <0>;
-          flavor = "balanced";
-          tapping-term-ms = <175>;
-          quick-tap-ms = <150>;
-          bindings = <&meh_mod>, <&kp H>;
-        };
-
-        meh_d: meh_d {
-          compatible = "zmk,behavior-hold-tap";
-          #binding-cells = <0>;
-          flavor = "balanced";
-          tapping-term-ms = <175>;
-          quick-tap-ms = <150>;
-          bindings = <&meh_mod>, <&kp D>;
-        };
-
         skcaps: sticky_keys_double_tap_caps {
           compatible = "zmk,behavior-tap-dance";
           #binding-cells = <0>;
