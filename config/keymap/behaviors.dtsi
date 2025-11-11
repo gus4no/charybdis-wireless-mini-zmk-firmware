@@ -74,7 +74,7 @@
           quick-tap-ms = <0>;
           flavor = "balanced";
           bindings = <&kp DOUBLE_QUOTES>, <&kp SINGLE_QUOTE>;
-        }
+        };
 
         middle_click_scroll: middle_click_scroll {
             compatible = "zmk,behavior-hold-tap";
