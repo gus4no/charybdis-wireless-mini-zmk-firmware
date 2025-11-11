@@ -1,10 +1,16 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
+&zip_temp_layer {
+  require-prior-idle-ms=<200>;
+  excluded-positions=<31 32 33 34>;
+};
+
 &trackball_listener {
     /* base processor chain on all layers */
     input-processors = <
       &zip_xy_scaler 5 5
+      &zip_temp_layer 3 500
     >;
 
 
