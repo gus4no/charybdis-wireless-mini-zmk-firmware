@@ -46,7 +46,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             bindings = <&meh>, <&kp>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             quick-tap-ms = <175>;
             require-prior-idle-ms = <125>;
         };
@@ -61,10 +61,18 @@
         as: auto_shift {
           compatible = "zmk,behavior-hold-tap";
           #binding-cells = <2>;
-          tapping-term-ms = <160>;
+          tapping-term-ms = <150>;
           quick-tap-ms = <0>;
           flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
+        };
+
+        middle_click_scroll: middle_click_scroll {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            flavor = "balanced";
+            bindings = <&mkp MB3>, <&mo 4>;
+            tapping-term-ms = <150>;
         };
     };
 };

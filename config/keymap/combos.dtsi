@@ -19,7 +19,7 @@
 
         combo_quote {
             key-positions = <8 9>;
-            bindings = <&kp SINGLE_QUOTE>;
+            bindings = <AS(SINGLE_QUOTE)>;
         };
 
         combo_sticky_shift {
@@ -35,6 +35,21 @@
         combo_slow_pointer {
             bindings = <&mo 5>;
             key-positions = <25 26>;
+        };
+
+        combo_left_click {
+            bindings = <&mkp MB1>;
+            key-positions = <31 32>;
+        };
+
+        combo_right_click {
+            bindings = <&mkp MB2>;
+            key-positions = <31 33>;
+        };
+
+        combo_middle_click_scroll {
+            bindings = <&middle_click_scroll>;
+            key-positions = <32 33>;
         };
 
         combo_bootloader {
