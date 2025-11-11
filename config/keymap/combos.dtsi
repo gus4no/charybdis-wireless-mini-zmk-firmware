@@ -19,11 +19,12 @@
 
         combo_quote {
             key-positions = <8 9>;
-            bindings = AS(SINGLE_QUOTE);
+            bindings = <&as LS(SINGLE_QUOTE) SINGLE_QUOTE>;
         };
 
         combo_sticky_shift {
             key-positions = <14 21>;
+            timeout-ms = <75>;
             bindings = <&skcaps>;
         };
 
