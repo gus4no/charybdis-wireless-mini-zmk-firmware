@@ -48,7 +48,7 @@
         };
 
         combo_middle_click_scroll {
-            bindings = <&middle_click_scroll>;
+            bindings = <&mo_click 4 BTN3>;
             key-positions = <32 33>;
         };
 

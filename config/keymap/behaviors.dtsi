@@ -67,11 +67,13 @@
           bindings = <&kp>, <&kp>;
         };
 
-        middle_click_scroll: middle_click_scroll {
+        mo_click: mo_click {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            flavor = "balanced";
-            bindings = <&mo 4>, <&mkp MB3>;
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <40>;
+            hold-while-undecided;
+            bindings = <&mo>, <&mkp>;
             tapping-term-ms = <150>;
         };
     };
