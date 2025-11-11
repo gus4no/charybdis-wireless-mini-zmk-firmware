@@ -11,7 +11,7 @@
     esc_base: esc_base {
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
-      bindings = <&kp ESC &to 0>;
+      bindings = <&kp ESC>, <&to 0>;
     };
   };
 };
