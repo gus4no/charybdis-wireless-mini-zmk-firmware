@@ -14,8 +14,8 @@
 
 &mt {
     flavor = "balanced";
-    quick-tap-ms = <120>;
-    require-prior-idle-ms = <50>;   // HUGE improvement
+    quick-tap-ms = <100>;
+    require-prior-idle-ms = <30>;   // HUGE improvement
     tapping-term-ms = <250>;        // Add this line
     hold-trigger-on-release;
 };

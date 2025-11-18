@@ -45,6 +45,7 @@
           tapping-term-ms = <150>;
           quick-tap-ms = <120>;
           require-prior-idle-ms = <40>;
+          bindings = <&kp>, <&kp>;
         };
 
         skcaps: sticky_keys_double_tap_caps {
