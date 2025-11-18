@@ -16,8 +16,7 @@
     flavor = "balanced";
     quick-tap-ms = <100>;
     require-prior-idle-ms = <30>;   // HUGE improvement
-    tapping-term-ms = <250>;        // Add this line
-    hold-trigger-on-release;
+    tapping-term-ms = <160>;        // Add this line
 };
 
 / {
@@ -44,7 +43,7 @@
             display-name = "Base";
             bindings = <
 &none &kp Q         &kp W         &kp F         &kp P            &kp B            &kp J          &kp L             &kp U         &kp Y            AS(SEMI)    &none
-&none &smt LALT A   &ht_shift LSHFT R   &lt 1 S       &mt LGUI T       &kp G            &kp M          &mt RGUI N        &lt 2 E       &ht_shift RSHFT I      &smt RCTRL O &none
+&none &smt LALT A   &mt LSHFT R   &lt 1 S       &mt LGUI T       &kp G            &kp M          &mt RGUI N        &lt 2 E       &mt RSHFT I      &smt RCTRL O &none
 &none &kp Z         &kp X         &kp C         &mt LC(LS(LALT)) D       &kp V            &kp K          &mt RC(RS(RALT)) H         AS(COMMA)     AS(DOT)          AS(SLASH)   &none
                                   &lt 4 ESC         &kp ENTER        &mt LSHFT TAB    &kp BACKSPACE  &kp SPACE
             >;
