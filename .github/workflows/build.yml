@@ -152,7 +152,7 @@ jobs:
           if [[ "$FM" == "bt" && "$SH" == *left ]]; then
             SNIPPET_OPTION="-DSNIPPET=studio-rpc-usb-uart"
           else
-            SNIPPET_OPTION=""
+            SNIPPET_OPTION="-DZMK_EXTRA_MODULES="
           fi
 
           # set keymap
