@@ -1,46 +1,48 @@
 / {
-    combos {
-        compatible = "zmk,combos";
+      combos {
+    compatible = "zmk,combos";
+    timeout-ms = <20>;
+    require-prior-idle-ms = <250>;
 
-        combo_lesc {
-            key-positions = <2 3 4>;
-            bindings = <&esc_base>;
-        };
-
-        combo_resc {
-            key-positions = <7 8 9>;
-            bindings = <&esc_base>;
-        };
-
-        combo_mesc {
-            key-positions = <31 32 33>;
-            bindings = <&esc_base>;
-        };
-
-        combo_quote {
-            key-positions = <8 9>;
-            bindings = <&as LS(SINGLE_QUOTE) SINGLE_QUOTE>;
-        };
-
-        combo_sticky_shift {
-            key-positions = <14 21>;
-            timeout-ms = <75>;
-            bindings = <&skcaps>;
-        };
-
-        combo_scroll {
-            bindings = <&mo 4>;
-            key-positions = <32 33>;
-        };
-
-        combo_slow_pointer {
-            bindings = <&mo 5>;
-            key-positions = <25 26>;
-        };
-
-        combo_bootloader {
-            bindings = <&bootloader>;
-            key-positions = <1 10>;
-        };
+    combo_lesc {
+        key-positions = <2 3 4>;
+        bindings = <&esc_base>;
     };
+
+    combo_resc {
+        key-positions = <7 8 9>;
+        bindings = <&esc_base>;
+    };
+
+    combo_quote {
+        key-positions = <8 9>;
+        bindings = <&as LS(SINGLE_QUOTE) SINGLE_QUOTE>;
+    };
+
+    combo_tilde {
+        key-positions = <2 3>;
+        bindings = <&as LS(GRAVE) GRAVE>;
+    };
+
+    combo_sticky_shift {
+        key-positions = <14 21>;
+        timeout-ms = <75>;
+        bindings = <&skcaps>;
+    };
+
+    combo_scroll {
+        bindings = <&mo 4>;
+        key-positions = <32 33>;
+    };
+
+    combo_snipe {
+        bindings = <&mo 5>;
+        key-positions = <25 26>;
+    };
+
+    combo_meh {
+        key-positions = <31 32>;
+        bindings = <&meh>;
+    };
+  };
 };

@@ -14,4 +14,3 @@
       bindings = <&kp ESC>, <&to 0>;
     };
   };
-};

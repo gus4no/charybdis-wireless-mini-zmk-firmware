@@ -8,16 +8,23 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 /* local overlays */
+#include "layers.dtsi"
 #include "macros.dtsi"
 #include "behaviors.dtsi"
 #include "combos.dtsi"
 
-&mt {
-    flavor = "balanced";
-    quick-tap-ms = <100>;
-    require-prior-idle-ms = <30>;   // HUGE improvement
-    tapping-term-ms = <175>;        // Add this line
+&sk {
+  release-after-ms = <600>;
+  quick-release;
 };
+
+&mt {
+  flavor = "balanced";
+  quick-tap-ms = <150>;
+  require-prior-idle-ms = <80>;   // HUGE improvement
+  tapping-term-ms = <200>;        // Add this line
+};
+
 
 / {
 /* --- KEYMAP CONFIG --- */
@@ -30,12 +37,7 @@
 // ╰──────┴──────┴──────┼──────┼──────┼──────┤  ├──────┼──────┼──────┴──────┴──────┴──────╯
 //                         36     37     38        39     40
 //                      ╰──────┴──────┴──────╯  ╰──────┴──────╯
-// #define BASE    0
-// #define NUM     1
-// #define NAV     2
-// #define MOUSE   3
-// #define SCROLL  4
-// #define SLOW    5
+// Layer definitions are in layers.dtsi
 
     keymap {
         compatible = "zmk,keymap";
@@ -45,7 +47,7 @@
 &none &kp Q         &kp W         &kp F         &kp P            &kp B            &kp J          &kp L             &kp U         &kp Y            AS(SEMI)    &none
 &none &smt LALT A   &mt LSHFT R   &lt 1 S       &mt LGUI T       &kp G            &kp M          &mt RGUI N        &lt 2 E       &mt RSHFT I      &smt RCTRL O &none
 &none &kp Z         &kp X         &kp C         &mt LC(LS(LALT)) D       &kp V            &kp K          &mt RC(RS(RALT)) H         AS(COMMA)     AS(DOT)          AS(SLASH)   &none
-                                  &lt 4 ESC         &kp ENTER        &mt LSHFT TAB    &kp BACKSPACE  &kp SPACE
+                                  &lt SCROLL ESC         &kp ENTER        &mt LSHFT TAB    &kp BACKSPACE  &kp SPACE
             >;
         };
 

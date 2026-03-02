@@ -4,95 +4,21 @@
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
 / {
-    behaviors {
-        // ht_num_func: homerow_mod {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <2>;
-        //     flavor = "tap-preferred";
-        //     tapping-term-ms = <260>; // triggers the hold behavior when the tapping-term-ms has expired
-        //     quick-tap-ms = <220>; // If you press a tapped hold-tap again within quick-tap-ms milliseconds of the first press, it will always trigger the tap behavior.
-        //     require-prior-idle-ms = <185>; // like quick-tap-ms however it will apply for any non-modifier key pressed before it
-        //     bindings = <&kp>, <&kp>;  // hold, tap
-        // };
-
-        // Left-hand HRM
-        ht_left: left_side_homerow_mod {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <260>;
-            quick-tap-ms = <120>;
-            require-prior-idle-ms = <80>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R THUMBS>;
-        };
-
-        // Right-hand HRM
-        ht_right: right_side_homerow_mod {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <260>;
-            quick-tap-ms = <120>;
-            require-prior-idle-ms = <80>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS>;
-        };
-
-        ht_shift: ht_shift {
-          compatible = "zmk,behavior-hold-tap";
-          #binding-cells = <2>;
-          flavor = "hold-preferred";
-          tapping-term-ms = <150>;
-          quick-tap-ms = <120>;
-          require-prior-idle-ms = <40>;
-          bindings = <&kp>, <&kp>;
-        };
-
-        skcaps: sticky_keys_double_tap_caps {
-          compatible = "zmk,behavior-tap-dance";
-          #binding-cells = <0>;
-          tapping-term-ms = <250>;
-          bindings = <&sk LSFT>, <&kp CAPSLOCK>; // tap, double_tap
-        };
-
-        as: auto_shift {
-          compatible = "zmk,behavior-hold-tap";
-          #binding-cells = <2>;
-          tapping-term-ms = <150>;
-          quick-tap-ms = <0>;
-          flavor = "tap-preferred";
-          bindings = <&kp>, <&kp>;
-        };
-
-        mo_click: mo_click {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <40>;
-            hold-while-undecided;
-            bindings = <&mo>, <&mkp>;
-            tapping-term-ms = <150>;
-        };
-
-        qmt: quick_mod_tap  {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <175>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <50>;
-            bindings = <&kp>, <&kp>;
-        };
-
-        smt: slow_mod_tap  {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <250>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <125>;
-            bindings = <&kp>, <&kp>;
-        };
+  behaviors {
+    skcaps: sticky_keys_double_tap_caps {
+      compatible = "zmk,behavior-tap-dance";
+      #binding-cells = <0>;
+      tapping-term-ms = <250>;
+      bindings = <&sk LSFT>, <&kp CAPSLOCK>; // tap, double_tap
     };
+
+    as: auto_shift {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      tapping-term-ms = <150>;
+      quick-tap-ms = <0>;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&kp>;
+    };
+  };
 };
