@@ -7,13 +7,13 @@
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/ext_power.h>
 
-/* local overlays */
-#include "layers.dtsi"
-#include "macros.dtsi"
-#include "behaviors.dtsi"
-#include "combos.dtsi"
-
-#define AS(keycode) &as LS(keycode) keycode
+#define BASE    0
+#define NUM     1
+#define NAV     2
+#define MOUSE   3
+#define SCROLL  4
+#define SLOW    5
+#define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
 &sk {
   release-after-ms = <600>;
@@ -28,7 +28,6 @@
 };
 
 
-/ {
 /* --- KEYMAP CONFIG --- */
 // ╭──────┬──────┬──────┬──────┬──────┬──────╮  ╭──────┬──────┬──────┬──────┬──────┬──────╮
 //    00     01     02     03    04      05        06     07     08     09     10     11
@@ -39,7 +38,88 @@
 // ╰──────┴──────┴──────┼──────┼──────┼──────┤  ├──────┼──────┼──────┴──────┴──────┴──────╯
 //                         36     37     38        39     40
 //                      ╰──────┴──────┴──────╯  ╰──────┴──────╯
-// Layer definitions are in layers.dtsi
+
+/ {
+  behaviors {
+      skcaps: sticky_keys_double_tap_caps {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <250>;
+        bindings = <&sk LSFT>, <&kp CAPSLOCK>; // tap, double_tap
+      };
+
+      as: auto_shift {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping-term-ms = <150>;
+        quick-tap-ms = <0>;
+        flavor = "tap-preferred";
+        bindings = <&kp>, <&kp>;
+      };
+    };
+
+    macros {
+      meh: meh {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&macro_press &kp LCTRL &kp LALT &kp LSHFT
+                    &macro_pause_for_release
+                    &macro_release &kp LCTRL &kp LALT &kp LSHFT>;
+      };
+
+      esc_base: esc_base {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp ESC>, <&to 0>;
+      };
+    };
+
+    combos {
+      compatible = "zmk,combos";
+      timeout-ms = <20>;
+      require-prior-idle-ms = <250>;
+
+      combo_lesc {
+          key-positions = <2 3 4>;
+          bindings = <&esc_base>;
+      };
+
+      combo_resc {
+          key-positions = <7 8 9>;
+          bindings = <&esc_base>;
+      };
+
+      combo_quote {
+          key-positions = <8 9>;
+          bindings = <&as LS(SINGLE_QUOTE) SINGLE_QUOTE>;
+      };
+
+      combo_tilde {
+          key-positions = <2 3>;
+          bindings = <&as LS(GRAVE) GRAVE>;
+      };
+
+      combo_sticky_shift {
+          key-positions = <14 21>;
+          timeout-ms = <75>;
+          bindings = <&skcaps>;
+      };
+
+      combo_scroll {
+          bindings = <&mo 4>;
+          key-positions = <32 33>;
+      };
+
+      combo_snipe {
+          bindings = <&mo 5>;
+          key-positions = <25 26>;
+      };
+
+      combo_meh {
+          key-positions = <31 32>;
+          bindings = <&meh>;
+      };
+    };
 
     keymap {
         compatible = "zmk,keymap";
