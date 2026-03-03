@@ -130,7 +130,7 @@
       };
 
       combo_pairing {
-          key-positions = <02 03 04>;
+          key-positions = <26 27 28>;
           bindings = <&tog 6>;
       };
     };
