@@ -7,7 +7,7 @@
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/ext_power.h>
 
-#include "keymap/layers.dtsi"
+#include "layers.dtsi"
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 

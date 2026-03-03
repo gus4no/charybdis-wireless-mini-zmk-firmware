@@ -1,6 +1,6 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
-#include "keymap/layers.dtsi"
+#include "layers.dtsi"
 
 &zip_temp_layer {
   require-prior-idle-ms=<800>;
