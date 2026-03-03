@@ -130,8 +130,8 @@
       };
 
       combo_pairing {
-          key-positions = <36 37 38>;
-          bindings = <&mo 6>;
+          key-positions = <02 03 04>;
+          bindings = <&tog 6>;
       };
     };
 
@@ -200,10 +200,10 @@
         PAIRING {
             display-name = "Pairing";
             bindings = <
-&none &trans    &kp N7    &kp N8    &kp N9    &kp N0    &trans    &trans    &trans    &trans    &trans &none
-&none &trans    &kp N4    &kp N5    &kp N6    &trans    &trans    &trans    &trans    &trans    &trans &none
+&none &sys_reset     &kp N7    &kp N8    &kp N9        &trans    &trans    &trans    &trans    &trans &none
+&none &out OUT_TOG    &kp N4    &kp N5    &kp N6    &trans    &trans    &trans    &trans    &trans    &trans &none
 &none &trans    &kp N1    &kp N2    &kp N3    &trans    &trans    &trans    &trans    &trans    &trans &none
-                           &trans    &trans    &trans    &trans    &trans
+                          &kp N0    &kp ENTER &trans   &trans    &trans
             >;
         };
 
